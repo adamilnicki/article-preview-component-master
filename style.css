@@ -57,48 +57,121 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(
-    to bottom,
-    var(--light-grayish-blue),
-    var(--grayish-blue)
-  );
+  background: var(--light-grayish-blue);
 }
 
 .card-container {
-  width: 80%;
-  max-width: 350px;
+  width: 85%;
   margin: 0 auto;
-  background-color: var(--light-grayish-blue);
+  background-color: #FFF;
+  border-radius:10px;
+  box-shadow: 0 1px 10px var(--grayish-blue);
+  position:relative;
+  overflow:auto;
 }
 
-.card-img img {
-  max-height: 100%;
-  max-width: 100%;
+.card-img{
+  margin-bottom:2rem;
+  max-height:calc(100% - 30px - 30px);
+}
+
+.card-img img{
+  object-fit:cover;
+  object-position:0 15%;
+  width:100%;
+  height:200px;
+  border-radius:10px 10px 0 0;
 }
 
 .card-text,
-.card-author {
-  padding: 1rem;
+.card-author{
+  padding: 0 1.8rem 0 1.8rem;
+  margin-bottom:1.5rem;
 }
 
 .card-text h2 {
+  font-size:1.25em;
   margin-bottom: 1rem;
+  font-weight:700;
+  color: var(--very-dark-grayish-blue);
+}
+
+.card-text p{
+  line-height:1.6;
+  font-size:1.02em;
+  color: var(--desaturated-grayish-blue);
 }
 
 .card-author{
   display:flex;
+  align-items:center;
 }
 
 .card-author-img img {
   border-radius: 50%;
-  width: 3.5rem;
+  width: 2.5rem;
+  flex-basis: calc(100% - 80% - 2rem);
 }
 
 .card-author-details{
   display:flex;
   flex-direction: column;
+  margin: 0 0.8rem 0 0.8rem;
+  flex-basis:calc(80% - 2rem);
 }
 
 .card-author-name{
   font-weight:700;
+  margin-bottom:0.2rem;
+  color: var(--very-dark-grayish-blue);
+}
+
+.card-author-date{
+  color: var(--grayish-blue);
+}
+
+.card-author-share,
+.card-socials-share{
+  text-decoration:none;
+  background-color:var(--light-grayish-blue);
+  border-radius:50%;
+  min-width:2rem;
+  min-height:2rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  flex-basis:2rem;
+}
+
+.card-socials-container{
+  padding:0;
+  background-color:var(--very-dark-grayish-blue);
+  display:flex;
+  height:44px;
+  width:100%;
+  align-items:center;
+  border-radius:0 0 10px 10px;
+  padding: 0.75rem 1.8rem 0.75rem 1.8rem;
+}
+
+.card-socials h3{
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight:300;
+  color:var(--light-grayish-blue);
+}
+
+.card-socials{
+  flex-basis:calc(100% - 2rem);
+}
+
+.card-socials-container .card-author-share{
+  width:2rem;
+  height:2rem;
+  flex-basis:2rem;
+}
+
+.hidden{
+  display:none;
 }

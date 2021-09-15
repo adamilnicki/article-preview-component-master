@@ -19,7 +19,7 @@
   <body>
     <div class="card-container">
       <div class="card-img">
-        <img src="images/drawers.jpg" alt="Drawers image" />
+        <img src="images/drawers.jpg">
       </div>
       <div class="card-text">
         <h2 class="card-text-heading">
@@ -33,6 +33,16 @@
           you make any room feel complete.
         </p>
       </div>
+      <!-- HIDDEN ACTIVE STATE JAVASCRIPT VERSION -->
+      <div class="card-socials-container hidden">
+        <div class="card-socials">
+          <h3>share</h3>
+        </div>
+        <div class="card-socials-share btn">
+          <img src="images/icon-share.svg"></i>
+        </div>
+      </div>
+      <!-- HIDDEN ACTIVE STATE END -->
       <div class="card-author">
         <div class="card-author-img">
           <img src="images/avatar-michelle.jpg" alt="Michelle avatar" />
@@ -41,8 +51,9 @@
           <p class="card-author-name">Michelle Appleton</p>
           <p class="card-author-date">28 Jun 2020</p>
         </div>
-        <a href="#" class="btn">Share</a>
+        <div class="card-author-share btn"><img src="images/icon-share.svg"></i></div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
