@@ -33,6 +33,8 @@ We provide SVGs for the social icons. But please feel free to use a font icon li
 - [Font Awesome](https://fontawesome.com)
 - [IcoMoon](https://icomoon.io)
 - [Ionicons](https://ionicons.com)
+
+SHARE icon color #6E8098
 */
 
 /*FONT font-family: 'Manrope', sans-serif;*/
@@ -68,6 +70,8 @@ body {
   box-shadow: 0 1px 10px var(--grayish-blue);
   position:relative;
   overflow:auto;
+  display:flex;
+  flex-direction:column;
 }
 
 .card-img{
@@ -83,10 +87,13 @@ body {
   border-radius:10px 10px 0 0;
 }
 
-.card-text,
-.card-author{
+.card-text{
   padding: 0 1.8rem 0 1.8rem;
   margin-bottom:1.5rem;
+}
+
+.card-author{
+  padding: 0 1.8rem 1rem 1.8rem;
 }
 
 .card-text h2 {
@@ -142,29 +149,41 @@ body {
   justify-content:center;
   cursor:pointer;
   flex-basis:2rem;
+  margin-top:1rem;
 }
 
 .card-socials-container{
   padding:0;
   background-color:var(--very-dark-grayish-blue);
   display:flex;
-  height:44px;
+  height:64px;
   width:100%;
   align-items:center;
   border-radius:0 0 10px 10px;
-  padding: 0.75rem 1.8rem 0.75rem 1.8rem;
-}
-
-.card-socials h3{
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  font-weight:300;
-  color:var(--light-grayish-blue);
+  padding: 0rem 1.8rem 1rem 1.8rem;
 }
 
 .card-socials{
   flex-basis:calc(100% - 2rem);
+  display:flex;
+  flex-direction:row;
+  align-items:center;
 }
+
+.card-socials a{
+  padding-top:1rem;
+  margin-left:1.1rem;
+}
+
+.card-socials h3{
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  font-weight:300;
+  font-size:13px;
+  color:var(--grayish-blue);
+  padding-top:0.8rem;
+}
+
 
 .card-socials-container .card-author-share{
   width:2rem;
@@ -174,4 +193,58 @@ body {
 
 .hidden{
   display:none;
+}
+
+.dark{
+  background-color:var(--desaturated-grayish-blue);
+}
+
+.dark path{
+  fill:white;
+}
+
+@media screen AND (min-width:500px){
+  .card-container{
+    max-width:900px;
+    flex-direction:row;
+  }
+
+  .card-img{
+    flex-basis:35%;
+    margin:0;
+  }
+
+  .text-container{
+    flex-basis:65%;
+    padding:1.5rem 1.2rem 1rem 1.2rem;
+  }
+
+  .card-img img{
+    height:100%;
+    width:100%;
+    border-radius:0;
+  }
+
+  .card-text h2{
+    font-size:1.8rem;
+  }
+
+  .card-text p{
+    font-size:1.1rem;
+  }
+
+  .card-author-img img{
+    width:3.5rem;
+  }
+
+  .card-author-name{
+    font-size:1.1rem;
+  }
+  .card-author-date{
+    font-size:1rem;
+  }
+
+  .card-author-share{
+    transform:scale(1.2,1.2);
+  }
 }
