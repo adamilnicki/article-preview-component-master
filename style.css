@@ -207,6 +207,8 @@ body {
   .card-container{
     max-width:900px;
     flex-direction:row;
+    position:relative;
+    overflow:visible;
   }
 
   .card-img{
@@ -246,5 +248,25 @@ body {
 
   .card-author-share{
     transform:scale(1.2,1.2);
+  }
+
+  .card-socials-container{
+    position:absolute;
+    width:15.5rem;
+    height:50px;
+    bottom:5.5rem;
+    right:-2.2rem;
+    border-radius:10px;
+    z-index:2;
+  }
+
+  .card-socials-diamond{
+    width:20px;
+    height:20px;
+    background-color:var(--very-dark-grayish-blue);
+    position:absolute;
+    left:calc(15.5rem / 2);
+    bottom:-10px;
+    transform:rotate(45deg);
   }
 }
